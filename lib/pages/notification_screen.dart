@@ -15,14 +15,23 @@ class NotificationScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('${message.notification?.title}'),
-            Text('${message.notification?.body}'),
-            Text('${message.data}'),
+            Text('Title : ${message.notification?.title}',style: TextStyle(
+              overflow: TextOverflow.ellipsis,
+              fontSize: 24,
+              fontWeight: FontWeight.bold
+
+            ),),
+            Text('Body : ${message.notification?.body}',style: TextStyle(
+                overflow: TextOverflow.visible,
+                fontSize: 24,
+                fontWeight: FontWeight.w600
+
+            ),
+            ),
+            Text('Data : ${message.data}'),
           ],
         ),
       ),
     );
   }
-    
-  
 }
